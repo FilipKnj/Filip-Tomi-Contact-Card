@@ -47,6 +47,7 @@ h2{
         img{
             width: 80%;
             height: auto;
+            border:3px solid $Blue;
             border-radius:10px;
         }
     }
@@ -110,4 +111,45 @@ h2{
         padding-left: 0;
     }
 
+}
+
+
+@media screen and (max-width:500px) {
+    body{
+        min-height: 100vh;
+    }
+    .card{
+        margin: 10px auto;
+        width: 90%;
+    }
+    .card-top-part,.card-bottom-part{
+        flex-direction: column;
+    }
+    .card-top-part{
+        .card-img-part{
+            width: 100%;
+            padding: 0;
+            img{
+                width: 100%;
+                height: auto;
+                border:none;
+                border-radius: 10px 10px 0 0;
+            }
+        }
+        .card-text-part{
+            width: 100%;
+            padding: 1rem;
+
+        }
+    }
+    .card-bottom-part{
+        border: none;
+        .info-part{
+            width: 100%;
+            border: none;
+            padding-left: 0;
+
+        }
+    }
+    
 }

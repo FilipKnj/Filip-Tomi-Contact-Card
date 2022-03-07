@@ -54,6 +54,7 @@ h2 {
 .card .card-img-part img {
   width: 80%;
   height: auto;
+  border: 3px solid #0077b5;
   border-radius: 10px;
 }
 .card .card-text-part {
@@ -118,4 +119,46 @@ h2 {
 }
 .card-bottom-part .info-part:nth-of-type(2) {
   padding-left: 0;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    min-height: 100vh;
+  }
+
+  .card {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .card-top-part, .card-bottom-part {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .card-top-part .card-img-part {
+    width: 100%;
+    padding: 0;
+  }
+  .card-top-part .card-img-part img {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 10px 10px 0 0;
+  }
+  .card-top-part .card-text-part {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .card-bottom-part {
+    border: none;
+  }
+  .card-bottom-part .info-part {
+    width: 100%;
+    border: none;
+    padding-left: 0;
+  }
 }
